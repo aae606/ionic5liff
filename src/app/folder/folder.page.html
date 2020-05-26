@@ -16,8 +16,37 @@
 
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI
-        Components</a></p>
+    <p>
+      Explore
+      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a>
+    </p>
     <p>OS: {{ os }}</p>
+ 
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+        <ion-card-title>
+
+          <ion-avatar>
+            <img src="https://image.freepik.com/free-vector/illustration-shaking-hands-agreement_53876-5893.jpg">
+          </ion-avatar>
+
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-chip>
+          <ion-avatar>
+            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+          </ion-avatar>
+          <ion-label>Chip Avatar</ion-label>
+        </ion-chip>
+
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button (click)="onClick()" expand="full" shape="round">
+      Scan
+    </ion-button>
   </div>
 </ion-content>

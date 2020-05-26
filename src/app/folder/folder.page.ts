@@ -10,8 +10,8 @@ import { LIFFErrorObject } from 'liff-type';
 export class FolderPage implements OnInit {
   public folder: string;
   public os: string;
-  public language: String;
-  public version: String;
+  public language: string;
+  public version: string;
   public isInClient: boolean;
   public isLogin: boolean;
 
@@ -61,5 +61,9 @@ export class FolderPage implements OnInit {
     this.displayName = profile.displayName;
     this.statusMessage = profile.statusMessage;
     this.email = (await liff.getDecodedIDToken()).email;
+  }
+
+  onClick() {
+    alert('Hi!');
   }
 }
