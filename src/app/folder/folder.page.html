@@ -15,21 +15,24 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>
-      Explore
-      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a>
-    </p>
-    <p>OS: {{ os }}</p>
- 
+  
+
+
+
     <ion-card>
-      <ion-card-header>
+      <ion-card-header>  <strong class="capitalize">{{ folder }}</strong>
         <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
         <ion-card-title>
-
-          <ion-avatar>
-            <img src="https://image.freepik.com/free-vector/illustration-shaking-hands-agreement_53876-5893.jpg">
-          </ion-avatar>
+          <p>
+            Explore
+            <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI
+              Components</a>
+          </p>
+          <p>OS: {{ os }}</p>
+          <!-- <ion-avatar>
+            <img src="https://image.freepik.com/free-vector/illustration-shaking-hands-agreement_53876-5893.jpg"
+              width="200px">
+          </ion-avatar> -->
 
         </ion-card-title>
       </ion-card-header>
@@ -45,8 +48,11 @@
       </ion-card-content>
     </ion-card>
 
-    <ion-button (click)="onClick()" expand="full" shape="round">
-      Scan
-    </ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Send Message </ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Share Target Picker </ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Open Window </ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Scan Code </ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Logout </ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Close </ion-button>
   </div>
 </ion-content>
