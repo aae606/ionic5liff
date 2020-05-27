@@ -118,7 +118,7 @@ export class FolderPage implements OnInit {
               contents: [
                 {
                   type: 'text',
-                  text: 'แบบประเมินสุขภาพจิต'+`${this.displayName}`,
+                  text: `แบบประเมินสุขภาพจิต`,
                   margin: 'md',
                   size: 'lg',
                   align: 'center',
