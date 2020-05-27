@@ -82,6 +82,30 @@
    * -------------------------------------------
    */
 
+   
+$colors: (
+  primary:    seagreen,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+
+
+$text-color: seagreen;
+//$background-color: #fff;
+$background-color:#ebebe0;
+$navbar-color: seagreen;
+$card-md-border-radius : 15px;
+$card-md-box-shadow-color :rgba(0, 0, 0, .3);
+$card-ios-border-radius : 15px;
+$card-ios-box-shadow-color :rgba(0, 0, 0, .3);
+$datetime-md-placeholder-color : #999;
+$toolbar-ios-title-text-align : center;
+$menu-width: 500px;
+$datetime-md-placeholder-color : #6b6b6b;
+
   body {
     --ion-color-primary: #428cff;
     --ion-color-primary-rgb: 66,140,255;
