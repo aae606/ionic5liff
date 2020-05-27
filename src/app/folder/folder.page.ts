@@ -26,9 +26,20 @@ export class FolderPage implements OnInit {
 
   ngOnInit() {
     this.main();
-    
-    this.img = '../../assets/newlogo2.png'
+
+    this.img = 'https://cdn3.iconfinder.com/data/icons/covid-19-coronavirus-protection-or-prevention-flat/64/Mask_1-512.png';
+    // this.img = '../../assets/newlogo2.png';
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
+  }
+
+  doRefresh(event) {
+    // console.log('Begin async operation');
+
+    // end
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 1000);
   }
 
   main() {
@@ -48,7 +59,6 @@ export class FolderPage implements OnInit {
         this.isLogin = liff.isLoggedIn();
       })
       .catch((err: LIFFErrorObject) => console.error(err.message));
-      
   }
   logIn() {
     liff.login();
