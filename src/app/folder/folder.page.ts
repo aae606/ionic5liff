@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LIFFErrorObject } from 'liff-type';
-
+import { VConsole } from 'vconsole';
 @Component({
   selector: 'app-folder',
   templateUrl: './folder.page.html',

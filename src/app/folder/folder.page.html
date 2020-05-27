@@ -6,7 +6,12 @@
     <ion-title>{{ folder }}</ion-title>
   </ion-toolbar>
 </ion-header> -->
-
+<script src="../../../node_modules/vconsole/dist/vconsole.min.js"></script>
+<script>
+  // init vConsole
+  var vConsole = new VConsole();
+  console.log('Hello world');
+</script> 
 <ion-content [fullscreen]="true">
 
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
