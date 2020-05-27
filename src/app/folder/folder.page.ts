@@ -34,10 +34,10 @@ export class FolderPage implements OnInit {
 
   doRefresh(event) {
     // console.log('Begin async operation');
-
+    window.location.reload();
     // end
     setTimeout(() => {
-      console.log('Async operation has ended');
+      // console.log('Async operation has ended');
       event.target.complete();
     }, 1000);
   }
