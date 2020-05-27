@@ -142,7 +142,7 @@ export class FolderPage implements OnInit {
                   type: 'button',
                   action: {
                     type: 'uri',
-                    label: 'PHQ-9',
+                    label: `PHQ-9 ${this.displayName}`,
                     uri: 'https://liff.line.me/1654187718-l0z2DKvr',
                   },
                   color: '#05683A',
