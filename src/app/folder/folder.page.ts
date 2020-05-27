@@ -22,6 +22,8 @@ export class FolderPage implements OnInit {
   public email: string;
   public img: string;
 
+  public thisCode: string;
+
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
@@ -87,7 +89,18 @@ export class FolderPage implements OnInit {
 
   async scanCode() {
     const result = await liff.scanCode();
-    document.getElementById('scanCode').append(result.value);
+    // this.thisCode = result.value;
+    liff.openWindow({
+      url: result.value,
+      external: true
+    });
+  }
+  openWebsite() {
+    liff.openWindow({
+      url: this.thisCode,
+      external: true
+    });
+    // window.open(this.thisCode, '_blank');
   }
 
   closed() {
@@ -239,6 +252,5 @@ export class FolderPage implements OnInit {
       //  alert("Message sent")
     }
   }
-
-  
+ 
 }
