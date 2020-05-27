@@ -66,7 +66,7 @@ export class FolderPage implements OnInit {
   }
   logOut() {
     liff.logout();
-    window.location.reload();
+    // window.location.reload();
   }
   async getUserProfile() {
     const profile = await liff.getProfile();
@@ -236,11 +236,9 @@ export class FolderPage implements OnInit {
         },
       ]);
       liff.closeWindow();
-       alert("Message sent")
+      //  alert("Message sent")
     }
   }
 
-  onClick() {
-    alert('Hi!');
-  }
+  
 }
