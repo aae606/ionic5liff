@@ -23,10 +23,10 @@
         <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
         <ion-card-title>สวัสดี {{ displayName }}</ion-card-title>
       </ion-card-header>
-      <!-- <ion-card-header *ngIf="!isLogin">
-        <ion-card-subtitle>ยินดีต้อนรับ</ion-card-subtitle>
+      <ion-card-header *ngIf="!isLogin">
+        <!-- <ion-card-subtitle>ยินดีต้อนรับ</ion-card-subtitle> -->
         <ion-card-title>ยินดีต้อนรับ</ion-card-title>
-      </ion-card-header> -->
+      </ion-card-header>
 
       <ion-card-content>
         <img *ngIf="isLogin" src="{{pictureUrl}}" style="align-items: center;" width="150px" />
