@@ -1,58 +1,46 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>{{ folder }}</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
+    <ion-toolbar class="new-background-color">
+      <!-- <ion-title size="large">{{ folder }}</ion-title> -->
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-  
-
-
-
     <ion-card>
-      <ion-card-header>  <strong class="capitalize">{{ folder }}</strong>
+      <ion-card-header *ngIf="isLogin">
         <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
-        <ion-card-title>
-          <p>
-            Explore
-            <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI
-              Components</a>
-          </p>
-          <p>OS: {{ os }}</p>
-          <!-- <ion-avatar>
-            <img src="https://image.freepik.com/free-vector/illustration-shaking-hands-agreement_53876-5893.jpg"
-              width="200px">
-          </ion-avatar> -->
-
-        </ion-card-title>
+        <ion-card-title>สวัสดี {{ displayName }}</ion-card-title>
       </ion-card-header>
+      <!-- <ion-card-header *ngIf="!isLogin">
+        <ion-card-subtitle>ยินดีต้อนรับ</ion-card-subtitle>
+        <ion-card-title>ยินดีต้อนรับ</ion-card-title>
+      </ion-card-header> -->
+
       <ion-card-content>
-
-        <ion-chip>
-          <ion-avatar>
-            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-          </ion-avatar>
-          <ion-label>Chip Avatar</ion-label>
-        </ion-chip>
-
+        <img *ngIf="isLogin" src="{{pictureUrl}}" style="align-items: center;" width="150px" />
+        <img *ngIf="!isLogin" src="{{img}}" style="align-items: center;" width="150px" />
       </ion-card-content>
     </ion-card>
 
-    <ion-button (click)="onClick()" expand="full" shape="round">Send Message </ion-button>
-    <ion-button (click)="onClick()" expand="full" shape="round">Share Target Picker </ion-button>
-    <ion-button (click)="onClick()" expand="full" shape="round">Open Window </ion-button>
-    <ion-button (click)="onClick()" expand="full" shape="round">Scan Code </ion-button>
-    <ion-button (click)="onClick()" expand="full" shape="round">Logout </ion-button>
-    <ion-button (click)="onClick()" expand="full" shape="round">Close </ion-button>
+    <ion-thumbnail slot="start" *ngIf="isLogin; then thenBlock else elseBlock">
+      <ion-img [src]="pictureUrl" #thenBlock></ion-img>
+      <ion-img [src]="img" #elseBlock></ion-img>
+    </ion-thumbnail>
+
+    <ion-button (click)="onClick()" expand="full" shape="round">Send Message</ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Share Target Picker</ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Open Window</ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Scan Code</ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Logout</ion-button>
+    <ion-button (click)="onClick()" expand="full" shape="round">Close</ion-button>
   </div>
 </ion-content>

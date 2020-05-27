@@ -26,3 +26,18 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+ion-content {
+
+  --ion-background-color:#dae1e7;
+}
+ion-button {
+  --background: #4CAF50;
+}
+
+ion-content ion-card ion-item.advanced-trans p {
+  --ion-background-color:#dae1e7;
+}
+
+.new-background-color{
+  --background: #4CAF50;
+}

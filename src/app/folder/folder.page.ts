@@ -20,11 +20,14 @@ export class FolderPage implements OnInit {
   public displayName: string;
   public statusMessage: string;
   public email: string;
+  public img: string;
 
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     this.main();
+    
+    this.img = '../../assets/newlogo2.png'
     this.folder = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
@@ -45,6 +48,7 @@ export class FolderPage implements OnInit {
         this.isLogin = liff.isLoggedIn();
       })
       .catch((err: LIFFErrorObject) => console.error(err.message));
+      
   }
   logIn() {
     liff.login();
