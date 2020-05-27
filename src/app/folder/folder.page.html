@@ -8,15 +8,22 @@
 </ion-header> -->
 
 <ion-content [fullscreen]="true">
+
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content></ion-refresher-content>
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
   </ion-refresher>
+
   <ion-header collapse="condense">
     <ion-toolbar class="new-background-color">
       <!-- <ion-title size="large">{{ folder }}</ion-title> -->
     </ion-toolbar>
   </ion-header>
-
+ 
   <div id="container">
     <ion-card>
       <ion-card-header *ngIf="isLogin">
@@ -34,10 +41,10 @@
       </ion-card-content>
     </ion-card>
     <ion-button *ngIf="!isLogin" (click)="logIn()" expand="full" shape="round">Login</ion-button>
-    <ion-button (click)="sendMsg()" expand="full" shape="round">Send Message</ion-button>
-    <ion-button (click)="shareMsg()" expand="full" shape="round">Share Target Picker</ion-button>
-    <ion-button (click)="openWindow()" expand="full" shape="round">Open Window</ion-button>
-    <ion-button (click)="scanCode()" expand="full" shape="round">Scan Code</ion-button>
+    <!-- <ion-button (click)="sendMsg()" expand="full" shape="round">Send Message</ion-button> -->
+    <!-- <ion-button (click)="shareMsg()" expand="full" shape="round">Share Target Picker</ion-button> -->
+    <!-- <ion-button (click)="openWindow()" expand="full" shape="round">Open Window</ion-button> -->
+    <!-- <ion-button (click)="scanCode()" expand="full" shape="round">Scan Code</ion-button> -->
     <ion-button *ngIf="isLogin" (click)="logOut()" expand="full" shape="round">Logout</ion-button>
     <ion-button (click)="closed()" expand="full" shape="round">Close</ion-button>
   </div>
